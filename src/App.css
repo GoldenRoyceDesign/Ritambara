@@ -1,0 +1,278 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+p,
+li {
+  font-size: 20px;
+}
+
+/* Navbar section style */
+.navbar {
+  background-color: #fff;
+  /* optional */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navlink {
+  color: #000 !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #552F91 !important;
+  /* or your brand color */
+}
+
+
+/* Home section style */
+.home {
+  background-image: url('/src/assets/ritambara-banner.png');
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}
+
+/* About Section style */
+
+.about-bg {
+  background-color: #552F91;
+  /* Purple */
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+}
+
+
+/* Image transition section style */
+.service-section {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 0.5s ease;
+}
+
+.service-section .overlay {
+  display: flex;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.service-section .activity-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 50px;
+  cursor: pointer;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.activity-column:hover,
+.activity-column.active {
+  background-color: #552F91;
+  /* violet background */
+}
+
+.service-section .activity-column:first-child {
+  border-left: none;
+}
+
+.service-section .activity-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: font-weight 0.3s ease, transform 0.3s ease;
+}
+
+.service-section .activity-column.active .activity-title {
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+.activity-details {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.activity-details ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.activity-details li {
+  margin-bottom: 0.3rem;
+}
+
+/* Contact Us style */
+
+.contact-section {
+  background-image: url('/src/assets/ritambara-bg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 0, 54, 0.6); /* purple overlay */
+  z-index: 1;
+}
+
+.contact-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section p{
+  background: rgba(254, 254, 254, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.contact-section .btn {
+  background: linear-gradient(to right, #552F91, #ed6002);
+  color: #fff;
+}
+
+.contact-section .btn:hover {
+  background: linear-gradient(to right, #ed6002, #552F91);
+  color: #fff;
+}
+
+
+/* Footer section style */
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* Scroll to top animation style */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #552F91;
+  color: #ed6002;
+  border: 1px solid #ed6002;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  animation: bounceUp 2s infinite;
+}
+
+.scroll-to-top:hover {
+  background-color: #ed6002;
+  color: #552F91;
+}
+
+@keyframes bounceUp {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .service-section {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .service-section .overlay {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .service-section .activity-column {
+    flex: 1;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  p,
+  li {
+    font-size: 16px;
+  }
+
+  .service h1 {
+    font-size: 2rem !important;
+  }
+
+  .service-section {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .service-section .overlay {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .service-section .activity-column {
+    flex: 1;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+  }
+
+}
+
+
+@media screen and (max-width: 350px) {
+  .service p,
+  li {
+    font-size: 14px;
+  }
+}
